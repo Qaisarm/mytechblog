@@ -1,65 +1,286 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type= "text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Qaisar-Tech-Blog</title>
 </head>
+
 <body>
     <header>
         <a href="#" class="logo"> My Tech Blog</a>
         <div class="menuToggle"></div>
     </header>
-        <ul class="navigation">
-            <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#">Post</a></li>
-        <li><a href="#">Contact</a></li>
+    <ul class="navigation">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+        <li><a href="#post"onclick="toggleMenu()">Post</a></li>
+        <li><a href="#contact"onclick="toggleMenu()">Contact</a></li>
 
     </ul>
-<!-- Banner -->
-<section class="banner" id="home">
-    <img src="banner.webp" alt=" home-banner" class="cover">
-    <div class="contentBx">
-        <h2>Tech Hacks for ease of newbie developers Life</h2>
-        <h4>A tech hack blog website</h4>
-        <a href="#about" class="btn"> About us</a>
-    </div>
-</section>
-<!-- About -->
-<section class="about" id="about">
-    <div class="title">
-        <h2>About us</h2>
-    </div>
-    <div class="contentBx">
-        <div class="contant">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum deleniti dicta, possimus ab earum dignissimos neque ducimus accusantium quod atque cupiditate adipisci rerum dolor eligendi autem velit provident molestias, sed numquam voluptate architecto debitis asperiores! Odio iure mollitia enim iusto vitae suscipit id, cupiditate illum voluptatibus placeat, numquam maiores magni deleniti porro molestias labore corrupti sunt voluptates. Eaque amet ullam corrupti delectus voluptate aliquam? Quo sunt libero neque voluptates dolorum illo in amet adipisci vel, at voluptatem exercitationem repellat facere perspiciatis unde incidunt id corrupti accusantium. Impedit, eveniet distinctio blanditiis commodi eaque vero obcaecati omnis recusandae, illo reprehenderit maiores esse consequuntur odit repellat, aperiam ipsum eligendi voluptatem et. Ut ipsam maiores perferendis. <br> <br> Alias quod ut, voluptate nisi esse id aspernatur! Eveniet numquam reiciendis optio veritatis deleniti saepe fugit labore debitis eius in repellendus maiores modi perspiciatis, amet corporis iure. Numquam nulla eveniet iure perspiciatis molestias. Ab illum quo qui earum aperiam veniam, laborum unde eos nihil! Praesentium fugiat repellat culpa suscipit facilis hic similique perferendis optio sapiente, vel impedit cupiditate beatae architecto temporibus earum autem id eveniet, vitae iste saepe delectus repudiandae numquam! Reiciendis eaque ratione fuga beatae amet ea, sapiente fugit, aspernatur voluptate, cum enim nam earum consectetur reprehenderit cumque culpa repellat itaque quia ipsum nostrum ipsam quam? Iusto quo a accusantium aliquid nostrum maxime ab, alias minima, doloribus tempora, ipsam natus assumenda? Voluptates amet vel sunt, reiciendis expedita repellendus possimus qui saepe aliquam neque beatae placeat facilis praesentium nostrum voluptatum distinctio. Dolores necessitatibus laudantium similique nesciunt temporibus at.</p>
+    <!-- Banner -->
+    <section class="banner" id="home">
+        <img src="banner.webp" alt=" home-banner" class="cover">
+        <div class="contentBx">
+            <h2>Tech Hacks for ease of newbie developers Life</h2>
+            <h4>A tech hack blog website</h4>
+            <a href="#about" class="btn"> About us</a>
         </div>
-        <div class="content">
-            <div class="imgBx">
-                <img src="about.jpg" alt="about us picture" class="cover">
+    </section>
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="title">
+            <h2>About us</h2>
+        </div>
+        <div class="contentBx">
+            <div class="contant">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum deleniti dicta, possimus ab
+                    earum dignissimos
+                    neque ducimus accusantium quod atque cupiditate adipisci rerum dolor eligendi autem velit provident
+                    molestias,
+                    sed numquam voluptate architecto debitis asperiores! Odio iure mollitia enim iusto vitae suscipit
+                    id,
+                    cupiditate illum voluptatibus placeat, numquam maiores magni deleniti porro molestias labore
+                    corrupti
+                    sunt voluptates. Eaque amet ullam corrupti delectus voluptate aliquam? Quo sunt libero neque
+                    voluptates
+                    dolorum illo in amet adipisci vel, at voluptatem exercitationem repellat facere perspiciatis unde
+                    incidunt
+                    id corrupti accusantium. Impedit, eveniet distinctio blanditiis commodi eaque vero obcaecati omnis
+                    recusandae, illo reprehenderit maiores esse consequuntur odit repellat, aperiam ipsum eligendi
+                    voluptatem
+                    et. Ut ipsam maiores perferendis. <br> <br> Alias quod ut, voluptate nisi esse id aspernatur!
+                    Eveniet
+                    numquam reiciendis optio veritatis deleniti saepe fugit labore debitis eius in repellendus maiores
+                    modi
+                    perspiciatis, amet corporis iure. Numquam nulla eveniet iure perspiciatis molestias. Ab illum quo
+                    qui
+                    earum aperiam veniam, laborum unde eos nihil! Praesentium fugiat repellat culpa suscipit facilis hic
+                    similique perferendis optio sapiente, vel impedit cupiditate beatae architecto temporibus earum
+                    autem id
+                    eveniet, vitae iste saepe delectus repudiandae numquam! Reiciendis eaque ratione fuga beatae amet
+                    ea,
+                    sapiente fugit, aspernatur voluptate, cum enim nam earum consectetur reprehenderit cumque culpa
+                    repellat
+                    itaque quia ipsum nostrum ipsam quam? Iusto quo a accusantium aliquid nostrum maxime ab, alias
+                    minima,
+                    doloribus tempora, ipsam natus assumenda? Voluptates amet vel sunt, reiciendis expedita repellendus
+                    possimus qui saepe aliquam neque beatae placeat facilis praesentium nostrum voluptatum distinctio.
+                    Dolores necessitatibus laudantium similique nesciunt temporibus at.</p>
+            </div>
+            <div class="content">
+                <div class="imgBx">
+                    <img src="about.jpg" alt="about us picture" class="cover">
+                </div>
             </div>
         </div>
-    </div>
 
-</section>
+    </section>
 
+    <!-- Latest Blog Post -->
+    <section class="post" id="post">
+        <div class="title">
+            <h2>Latest Post</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut molestiae tempore veritatis sit beatae nihil
+                quidem ipsum eveniet voluptas reprehenderit laudantium. Nemo.</p>
 
+        </div>
+        <div class="contentBx">
+            <div class="postColumn">
+                <div class="postBox">
+                    <div class="imgBx">
+                        <img src="post2.jpg" alt="post image one" class="cover">
 
-<script>
+                    </div>
+                    <div class="textBx">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis asperiores commodi
+                            eligendi odio
+                            dolores perspiciatis, laudantium laboriosam inventore at
+                            cupiditate repellat itaque nesciunt officiis est eum sapiente reiciendis placeat
+                            reprehenderit.</h3>
+                        <a href="" class="btn"> Read More</a>
+                    </div>
+                </div>
+                <div class="postBox extraHeight">
+                    <div class="imgBx">
+                        <img src="post1.jpg" alt="post image one" class="cover">
 
-const menuToggle = document.querySelector('.menuToggle');
-const navigation = document.querySelector('.navigation');
-menuToggle.onclick = function(){
-    menuToggle.classList.toggle('active');
-    navigation.classList.toggle('active');
-}
-window.addEventListener('scroll', function()
-{
-    const header = document.querySelector('header');
-    header.classList.toggle('sticky', window.scrollY > 0)
-})
-</script>
+                    </div>
+                    <div class="textBx">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis asperiores commodi
+                            eligendi odio
+                            dolores perspiciatis, laudantium laboriosam inventore at
+                            cupiditate repellat itaque nesciunt officiis est eum sapiente reiciendis placeat
+                            reprehenderit.</h3>
+                        <a href="" class="btn"> Read More</a>
+                    </div>
+                </div>
+                <div class="postBox">
+                    <div class="imgBx">
+                        <img src="post2.jpg" alt="post image one" class="cover">
+
+                    </div>
+                    <div class="textBx">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis asperiores commodi
+                            eligendi odio
+                            dolores perspiciatis, laudantium laboriosam inventore at
+                            cupiditate repellat itaque nesciunt officiis est eum sapiente reiciendis placeat
+                            reprehenderit.</h3>
+                        <a href="" class="btn"> Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="postColumn">
+                <div class="postBox">
+                    <div class="imgBx">
+                        <img src="post1.jpg" alt="post image one" class="cover">
+
+                    </div>
+                    <div class="textBx">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis asperiores commodi
+                            eligendi odio
+                            dolores perspiciatis, laudantium laboriosam inventore at
+                            cupiditate repellat itaque nesciunt officiis est eum sapiente reiciendis placeat
+                            reprehenderit.</h3>
+                        <a href="" class="btn"> Read More</a>
+                    </div>
+                </div>
+                <div class="postBox">
+                    <div class="imgBx">
+                        <img src="post1.jpg" alt="post image one" class="cover">
+
+                    </div>
+                    <div class="textBx">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis asperiores commodi
+                            eligendi odio
+                            dolores perspiciatis, laudantium laboriosam inventore at
+                            cupiditate repellat itaque nesciunt officiis est eum sapiente reiciendis placeat
+                            reprehenderit.</h3>
+                        <a href="" class="btn"> Read More</a>
+                    </div>
+                </div>
+                <div class="postBox extraHeight">
+                    <div class="imgBx">
+                        <img src="post1.jpg" alt="post image one" class="cover">
+
+                    </div>
+                    <div class="textBx">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis asperiores commodi
+                            eligendi odio
+                            dolores perspiciatis, laudantium laboriosam inventore at
+                            cupiditate repellat itaque nesciunt officiis est eum sapiente reiciendis placeat
+                            reprehenderit.</h3>
+                        <a href="" class="btn"> Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="postColumn">
+                <div class="postBox">
+                    <div class="imgBx">
+                        <img src="post2.jpg" alt="post image one" class="cover">
+
+                    </div>
+                    <div class="textBx">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis asperiores commodi
+                            eligendi odio
+                            dolores perspiciatis, laudantium laboriosam inventore at
+                            cupiditate repellat itaque nesciunt officiis est eum sapiente reiciendis placeat
+                            reprehenderit.</h3>
+                        <a href="" class="btn"> Read More</a>
+                    </div>
+                </div>
+                <div class="postBox extraHeight">
+                    <div class="imgBx">
+                        <img src="post1.jpg" alt="post image one" class="cover">
+
+                    </div>
+                    <div class="textBx">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis asperiores commodi
+                            eligendi odio
+                            dolores perspiciatis, laudantium laboriosam inventore at
+                            cupiditate repellat itaque nesciunt officiis est eum sapiente reiciendis placeat
+                            reprehenderit.</h3>
+                        <a href="" class="btn"> Read More</a>
+                    </div>
+                </div>
+                <div class="postBox">
+                    <div class="imgBx">
+                        <img src="post2.jpg" alt="post image one" class="cover">
+
+                    </div>
+                    <div class="textBx">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis asperiores commodi
+                            eligendi odio
+                            dolores perspiciatis, laudantium laboriosam inventore at
+                            cupiditate repellat itaque nesciunt officiis est eum sapiente reiciendis placeat
+                            reprehenderit.</h3>
+                        <a href="" class="btn"> Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="title">
+            <a href="#" class="btn mgt60"> Load More</a>
+        </div>
+    </section>
+    <!-- Contact -->
+    
+    <section class="contact" id="contact">
+        <div class="title">
+            <h2>Get in Touch</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut molestiae tempore veritatis sit beatae nihil
+                quidem ipsum eveniet voluptas reprehenderit laudantium. Nemo.</p>
+
+        </div>
+        <div class="contactForm">
+            <div class="row">
+<input type="text" name="" placeholder="First Name">
+<input type="text" name="" placeholder="Last Name">
+            </div>
+            <div class="row">
+                <input type="text" name="" placeholder="Email">
+                <input type="text" name="" placeholder="mobile No.">
+                            </div>
+                            <div class="row2">
+                                <textarea name="" id="" placeholder="Message"></textarea>
+                              
+                                            </div>
+                                            <div class="row2">
+                                                <input type="submit" value="Send" class="btn">
+                                                            </div>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer>
+        <a href="#" class="logo"> My Tech Blog</a>
+        <ul class="footerMenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#post">Post</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <p class="copyrightText"> Copyright &#169; 2022 Qaisar's Tech Blog. All Right Reserved</p>
+    </footer>
+    <script>
+
+        const menuToggle = document.querySelector('.menuToggle');
+        const navigation = document.querySelector('.navigation');
+        menuToggle.onclick = function () {
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0)
+        })
+        function toggleMenu()
+        {
+            menuToggle.classList.remove('active');
+            navigation.classList.remove('active')
+        }
+    </script>
 </body>
+
 </html>
