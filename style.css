@@ -7,6 +7,10 @@ box-sizing: border-box;
 font-family: 'Poppins', sans-serif;   
 scroll-behavior: smooth;
 }
+.banner .contentBx .blog_background
+{
+    background-color: bisque;
+}
 :root
 {
     --black: #333;
@@ -212,7 +216,7 @@ background: var(--white);
 }
 p{
     color: var(--black);
-    font-weight: 300;
+    font-weight: 500;
     text-align: justify;
 }
 .about .contentBx
@@ -299,6 +303,29 @@ font-size: 1em;
     margin-top: 60px;
 }
 
+.blog .contentBlogBx .code{
+    font-family: Consolas,"courier new";
+    color: crimson;
+    background-color: #f1f1f1;
+    padding: 2px;
+    font-size: 105%;
+  }
+
+.blog .contentBlogBx{ 
+    margin-top: 50px;
+    border-style: dotted dashed solid double;
+    margin: 50px 50px;
+    padding-left: 40px;
+    padding-right: 30px;
+
+}
+.blog .contentBlogBx .blogimg{ 
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-style: dashed dashed;
+    min-height: 400px; 
+  width: 100%;
+}
 .contact{
     display: flex;
     justify-content: center;
@@ -362,7 +389,9 @@ height: 200px;
     color: var(--black);
     cursor: pointer;
 }
-
+.honeypot{
+    display: none;
+}
 .contact .contactForm .row2 input[type="submit"]:hover
 {
     background: var(--black);

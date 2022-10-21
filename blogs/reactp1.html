@@ -1,0 +1,322 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <title>Qaisar-Tech-Blog</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"> My Tech Blog</a>
+        <div class="menuToggle"></div>
+    </header>
+    <ul class="navigation">
+        <li><a href="/index.html#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="/index.html#home"" onclick="toggleMenu()">Home</a></li>
+        <li><a href="/index.html#post"onclick="toggleMenu()">Post</a></li>
+        <li><a href="#contact"onclick="toggleMenu()">Contact</a></li>
+
+    </ul>
+    <!-- Banner -->
+    <section class="banner" id="home">
+        <img src="../react.jpg" alt=" home-banner" class="cover">
+        <div class="contentBx">
+            <h2>React for Beginners</h2>
+        <h4>Part 1: Introducion and Project setup</h4>
+          
+        </div>
+    </section>
+    <!-- About -->
+    <div class="blog">
+        <div class="contentBlogBx">
+            <p>
+                <p>React is one of the usefull JavaScript library that is used to build web applications.
+                    This library is <strong> Declarative  </strong> , which allows you to control the flow and the state of your application
+                     by allowing you to describe what it should look like. This is in contrast to <strong> Imperative </strong> libraries, 
+                     which describe what your web application should do.</p>
+                     <p>React was developed by Facebook in 2011 and is one of the most widely used JavaScript frameworks.</p>
+                     <p>React skillsets are in demand and many employers are looking for such candidates, but the number of persons with 
+                        required skill set is lower. Learning React can be overwhelming. 
+                        There are so many new concepts to familiarize yourself with
+                        and many of the tutorials can be hard to follow. 
+                        So let's break down key concepts from React.
+
+                        I am not an expert on React, so if you find mistakes, feel free to leave a private note or comment below!
+                     </p>
+
+                     <h1>
+    Getting Started
+</h1>
+<p>
+    
+    The easiest way to create a new single-page application in React is to use <code class="code"> create-react-app. </code>
+    This is a command line interface (CLI) which allows you to <a href="https://reactjs.org/docs/create-a-new-react-app.html">quickly scaffold a React application</a> . 
+</p>
+<p>
+    
+    This scaffold code includes all of the development and workspace configuration so you can easily get started.
+</p>
+<p>    
+    To use the React CLI, first you need to install it globally. You can use <code class="code">npm</code> or <a href="https://www.npmjs.com/package/create-react-app">Node Package Manager</a> to run the installation. 
+</p>
+
+
+<h3> Create A React Application In A New Folder </h3>
+<p>
+    
+    Before creating a React application you'll need to have Node >= 14.0.0 and npm >= 5.6 on your machine.
+</p>
+<p>
+    To create a project, run the following commands:
+</p>
+
+<code class="code"> 
+    <br>
+    npx create-react-app my-app <br>
+    cd my-app <br>
+    npm start <br>
+</code>
+<p>
+    
+    Note that npx on the first line is not a typo — it's a package runner tool that comes with npm 5.2+.
+</p>
+   <h3> Create A React Application In An Existing Folder</h3>
+<code class="code">
+    
+    cd my-app <br>
+    npx create-react-app  .<br>
+    npm start <br>
+</code>
+<p>
+    
+    If you do not have integrated development environment (IDE) installed on your device then <a href="https://codesandbox.io/"> CodeSandbox.io</a> is another way to play around with the React code.
+    This wonderful web-based tool allows you to experiment and download the source-code afterwords.
+</p>
+
+
+<h2>
+
+    Create-React-App
+</h2>
+<p>
+
+    Let's examine the application structure when you create the React app with <code class="code">create-react-app.</code> 
+</p>
+<p>
+    In your terminal or command line, run <code class=" code"> create-react-app my-app</code>. A new folder will be created in your current directory with the starter React app.
+</p>
+
+    <img src="../reactblog1.png" alt=" react command line image" class="blogimg">
+
+
+<p>
+
+    Once that's done, <code class="code">cd my-app</code> and run <code class="code"> npm install </code> or <code class="code"> yarn install</code>.
+This will download all of the dependencies that are needed for the starter application.
+    
+</p>
+  <p>
+
+      Now, open the application in an IDE of your choice. I am using <a href="https://code.visualstudio.com/">Visual Studio Code </a> here.
+  </p>
+
+<p>
+    
+    This is what the <code class="code">index.js</code> file in the app looks like.
+</p>
+<p>
+    
+    Let's break this down line by line.
+</p>
+<img src="../reactindex.png" alt=" react command line image" class="blogimg">
+<p>
+
+    <strong>  Line 1-2:</strong>  We import React and ReactDOM so it can be used in our application.
+</p>
+
+<p>
+    
+    <strong>  Line 3:</strong> We import the CSS file of <code class="code"> index.css </code> to use it in the <code class="code"> index.js </code> file.
+</p>
+<p>
+    <strong>  Line 4:</strong> We import the <code class="code"> App</code> component so it can be attached to the DOM.
+</p>
+<p>
+    <strong>  Line 5:</strong> We import <code class="code"> reportWebVitals</code>. This is to measure the performance 
+    of the app, we pass a function to log the results (for example: <code class="code"> reportWebVitals(console.log))</code> or send to an analytics endpoint. <a href="https://create-react-app.dev/docs/measuring-performance/"> 
+        Here </a> you can learn moreabout the Measuring performance of the App.
+</p>
+<p>
+
+    <strong>  Line 7-12:</strong> Using ReactDOM, the App component can be mounted to the DOM. <br>
+    To render a React element, first pass the DOM element <code class="code">document.getElementById('root')</code> to <code class="code"> ReactDOM.createRoot()</code> , 
+    then pass the React component of <code class="code"> App</code> to <code class="code">root.render():</code>
+ 
+</p>
+
+<p>
+    <strong>  Line 13: </strong>We call the fucntion <code class="code"> reportWebVitals();</code>. so we can measure the Vitals of the App.
+</p>
+<p>
+
+We've reviewed the <code class="code"> index.js </code> file, let's now check out the <code class="code"> App.js </code> component.
+</p>
+
+<img src="../reactapp.png" alt=" react command line image" class="blogimg">
+<p>
+
+    <strong>  Line 1:</strong> Image file of logo is imported, the displays the logo image on UI</p>
+<p>
+
+    <strong>  Line 2:</strong> Import the CSS file of the <code class="code"> App</code>.
+</p>
+
+<p>
+
+    <strong>  Line 3:</strong> Create the functional component of the <code class="code"> App</code>.
+</p>
+<p>
+    
+    
+    There are two different types of components in React: functional and class components. <br>
+    
+   <strong> Functional Components </strong> are declared with the function keyword and accept props as an argument. They simply return valid React element. <br>
+    
+    <strong>Class Components </strong> are declared with the class keyword and extend React.Component or just Component if you have imported it using the destructured format.
+    <br>
+    Both functional and class components are logically equivalent (class just provides more functionality).
+</p>
+
+<p>
+    
+   <strong>  Line 23:</strong> Export the App component.
+</p>
+
+<p>
+    Multiple named exports in a single JavaScript file can be used such as :
+</p>
+<code class="code">
+    
+    export class FirstClass {} <br>
+    export class SecondClass {}
+    <br>
+</code>
+<p>
+    
+    These exports must be imported using their exact names:
+</p>
+<code class="code">
+
+    import { FirstClass, SecondClass } from './App';
+</code>
+<p>
+
+    When we use a <code class="code"> default</code>export, we can do the following:
+</p>
+<code class="code">
+
+    export default class FirstClass {}
+</code>
+<p>
+
+    And import it this way:
+</p>
+<code class="code">
+    
+    import FirstClass from './App';
+</code>
+<p>
+
+</p>
+<p>
+
+   <em> There can only be one default export per JavaScript file.</em> In React, it's good practice to export one component per file, so export default is the common way to export your components.
+</p>
+
+<p>
+    
+    And that's it!
+    
+    I hope this has been a helpful introduction to React. If you have questions, feel free to comment down below.
+</p>
+</p>
+        </div>
+      
+      
+    </div>
+    
+   
+
+    </section>
+
+  
+    <!-- Contact -->
+    
+    <section class="contact" id="contact">
+        <div class="title">
+            <h2>Get in Touch</h2>
+            <p>You can contact me if you have any question :)</p>
+
+        </div>
+
+        <div class="contactForm">
+        <form action="https://formsubmit.co/qmphy99@gmail.com" method="POST">
+                 <!-- Honeypot -->
+          <input type="text" name="_honey" class="honeypot">
+            <!-- Disable Captcha -->
+          <input type="hidden" name="_captcha" value="false">
+          <div class="row">
+            <input type="text" name="First Name" placeholder="First Name">
+            <input type="text" name="Last Name" placeholder="Last Name">
+                        </div>
+                        <div class="row">
+                            <input type="text" name="Email" placeholder="Email">
+                            <input type="text" name="Mobile" placeholder="mobile No.">
+                                        </div>
+                                        <div class="row2">
+                                            <textarea name="Comments and Questions" id="" placeholder="Message"></textarea>
+                                          
+                                                        </div>
+            
+              <div class="row2"> <button type="submit" class="btn">Send</button>
+                            </div>
+           
+       </form>
+        </div>
+     
+    
+    <!-- Footer-->
+    <footer>
+        <a href="#" class="logo"> My Tech Blog</a>
+        <ul class="footerMenu">
+            <li><a href="/index.html#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#post">Post</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <p class="copyrightText"> Copyright &#169; 2022 Qaisar's Tech Blog. All Right Reserved</p>
+    </footer>
+    <script>
+
+        const menuToggle = document.querySelector('.menuToggle');
+        const navigation = document.querySelector('.navigation');
+        menuToggle.onclick = function () {
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0)
+        })
+        function toggleMenu()
+        {
+            menuToggle.classList.remove('active');
+            navigation.classList.remove('active')
+        }
+    </script>
+</body>
+
+</html>

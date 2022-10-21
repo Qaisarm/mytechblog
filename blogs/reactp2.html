@@ -1,0 +1,232 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <title>Qaisar-Tech-Blog</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"> My Tech Blog</a>
+        <div class="menuToggle"></div>
+    </header>
+    <ul class="navigation">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+        <li><a href="#post"onclick="toggleMenu()">Post</a></li>
+        <li><a href="#contact"onclick="toggleMenu()">Contact</a></li>
+
+    </ul>
+    <!-- Banner -->
+    <section class="banner" id="home">
+        <img src="../react.jpg" alt=" home-banner" class="cover">
+        <div class="contentBx">
+            <h2>React for Beginners</h2>
+        <h4>Part 2: A syntax extension to JavaScript: JSX</h4>
+        </div>
+    </section>
+  
+    
+<!-- About -->
+<div class="blog">
+    <div class="contentBlogBx">
+        <p>
+            
+        During learning React you may have seen a funny syntax that looks like HTML code inside of the React application. That is JSX, a syntax extension to JavaScript.
+        </p>
+<p>
+    
+   This syntax is a combination between HTML and JavaScript. The JSX elements are used to produce the React elements.
+</p>
+
+        <h2>
+
+            Why JSX is used?
+        </h2>
+        <p>
+        </p>
+        In traditional applications, the view (HTML) is seperated from the logic (JavaScript). So, the
+         React is built upon the idea that the data within the application is related to the logic
+          which renders components. The React couples the markup and the logic together inside of components.
+        <p>
+        </p>
+       The use of JSX is not mandatory for creating the React applications, but it is extremely useful.
+        
+        <h2>
+            JSX Expressions
+        </h2>
+        <p>
+            JSX expressions are used to pass variables to elements and properties, evaluate boolean expressions, and more! We can use curly braces ({}) to create expressions in JSX.
+        </p>
+        
+    
+        
+        
+        <h3>
+            Attributes
+        </h3>
+        <p>
+            The string attributes can be specified, just like it is done in HTML, with quotes or double quotes.
+        </p>
+
+        <code class="code">
+            const header = < header className=" myHeader"></header>; <br>
+        </code>
+        
+        <p>
+
+           To evaluate the JavaScript expression, curly braces can also be used.
+           There is no need to wrap the curly braces in quotes; one can use either quotes (strings) or curly braces (expressions), but can not both.
+        </p>
+        <code class="code">
+            const profilePicture = < img src = {user.picture} alt = "Me!" />; <br>
+        </code>
+        <h3>
+            Conditional Classes
+        </h3>
+            <p>
+                To set a conditional classes that is based on a variable is very useful in React.
+                 Such classes allow us to say: if this condition is true, then add these classes to the component, otherwise add these classes.
+            </p>
+            <p>
+                One can use it to hide and show the dialogs or modals when the visibility is toggled, for example. Below is the basic syntax.
+            </p>
+            <code class="code">
+                  < h1  className= {condition ? true condition : false condition}></h1>; <br>
+            </code>
+            <h3>
+                JSX is an Expression Too
+            </h3>
+
+            After compilation of the code, the JSX expressions becomes a regular JavaScript function that calls and evaluate to JavaScript objects.
+            
+            This means that JSX can be used inside of if statements and for loops, assign it to variables, accept it as arguments, and return it from functions:
+            <br>
+            <code class="code">
+                <br>
+
+                function getGreeting(user) { <br>
+                    if (user) { <br>
+                        return < h1>Hello, {formatName(user)}!</h1>; <br>
+                    } <br>
+                    return < h1>Hello, Stranger.</h1>; <br>
+                }
+            </code>
+            
+       
+       <p>
+            In the above code, we return the user,s name if they're logged in and otherwise just return <code class="code">Hello Stranger!.</code> 
+        </p>
+            <p>        
+            We can also re-factor the code to make it a bit more succinct.
+        </p>
+       
+        <code class="code"> function getGreeting(user) { <br>
+            return user.isAuthenticated ?< h1> Hello, {formatName(user)}! </h1>:< h1>Hello Stranger!.</h1>; <br>
+        } <br>
+    } <br>
+    </code> 
+
+    <p>
+        And even more succinct…
+    </p>   
+        
+    <code class="code"> function getGreeting(user) { <br>
+        return < h1> Hello, {formatName(user).isAuthenticated ?formatName(user): 'Stranger!'.</h1>; <br>
+    } <br>
+} <br>
+</code>  
+       
+<h3>
+            Self-Closing Tags
+        </h3>
+        <p>
+            
+            If an element has no children, it is a self-closing element. This means you don't need the corresponding end tag.
+        </p>
+        <p>
+
+            So instead of writing <code class="code">< element> < /element></code> , you would write <code class="code"> < element /></code> .
+        </p>
+        
+        <p>
+
+            JSX is pretty simple to use once you get your hands dirty with it.
+
+        </p>
+        <p>
+            And that's it! I hope this has been a helpful introduction to RJX. If you have questions, feel free to comment down below.
+        </p>
+        </div>
+        </div>
+    <!-- Contact -->
+    
+    <section class="contact" id="contact">
+        <div class="title">
+            <h2>Get in Touch</h2>
+            <p>You can contact me if you have any question :)</p>
+
+        </div>
+
+        <div class="contactForm">
+        <form action="https://formsubmit.co/qmphy99@gmail.com" method="POST">
+                 <!-- Honeypot -->
+          <input type="text" name="_honey" class="honeypot">
+            <!-- Disable Captcha -->
+          <input type="hidden" name="_captcha" value="false">
+          <div class="row">
+            <input type="text" name="First Name" placeholder="First Name">
+            <input type="text" name="Last Name" placeholder="Last Name">
+                        </div>
+                        <div class="row">
+                            <input type="text" name="Email" placeholder="Email">
+                            <input type="text" name="Mobile" placeholder="mobile No.">
+                                        </div>
+                                        <div class="row2">
+                                            <textarea name="Comments and Questions" id="" placeholder="Message"></textarea>
+                                          
+                                                        </div>
+            
+              <div class="row2"> <button type="submit" class="btn">Send</button>
+                            </div>
+           
+       </form>
+        </div>
+     
+    </section>
+    <!-- Footer-->
+    <footer>
+        <a href="#" class="logo"> My Tech Blog</a>
+        <ul class="footerMenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#post">Post</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <p class="copyrightText"> Copyright &#169; 2022 Qaisar's Tech Blog. All Right Reserved</p>
+    </footer>
+    <script>
+
+        const menuToggle = document.querySelector('.menuToggle');
+        const navigation = document.querySelector('.navigation');
+        menuToggle.onclick = function () {
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0)
+        })
+        function toggleMenu()
+        {
+            menuToggle.classList.remove('active');
+            navigation.classList.remove('active')
+        }
+    </script>
+</body>
+
+</html>
+
