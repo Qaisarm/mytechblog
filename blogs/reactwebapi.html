@@ -34,18 +34,34 @@
         <div class="contentBlogBx">
             
     <p>
-        # How to do this Project from scratch:
+    <h2>
 
-# 1. Setting up the DB
-If you don't have a docker SQL Server set up, run this cmd.
-(You need a docker.compose.yml)
-```bash
-docker-compose up -d
-```
-* We're using Azure Data Studio to check the db structure.
+        How to do this Project from scratch:
+    </h2>
 
-## Connecting in Azure Data Studio:
+<h3>
+
+    1. Setting up the DB
+</h3>
+<p>
+
+    If you don't have a docker SQL Server set up, run this cmd.
+    (You need a docker.compose.yml)
+</p>
+<code class="code">
+
+    docker-compose up -d
+</code>
+<br>
+
+
+<h4>
+
+    Connecting in Azure Data Studio:
+</h4>
 --> New Connection, then type:
+<br>
+<code class="code">
 
     Connection Type: 
     Microsoft SQL Server
@@ -55,50 +71,84 @@ docker-compose up -d
     Password = Password_2_Change_4_Real_Cases_&
 
     rest things :) = Default
+</code>
 
-# 2. Create Web Api
-## 2.1 Create WebAPI Project
-/// MAke sure you have dotnet version 6!!!!!!
-dotnet new globaljson --sdk-version 6.0.101
-```bash
-dotnet new webapi -o simpleAPI
-```
+<h3>
+
+    2. Create Web Api
+</h3>
+<h4>
+
+    2.1 Create WebAPI Project
+</h4>
+/// Make sure you have dotnet version 6!!!!!!
+<code class="code">
+
+    dotnet new globaljson --sdk-version 6.0.101
+</code>
+<br>
+<code class="code">
+
+    dotnet new webapi -o simpleAPI
+</code>
+<br>
 * SimpleAPI will be the webapi Project Name!
-```bash
-cd simpleAPI
-```
-## 2.2 Add Entity Framework
+<br>
+<code class="code">
 
-```bash
-dotnet add package Microsoft.EntityFrameworkCore.Design
-dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
-dotnet add package Microsoft.EntityFrameworkCore.SqlServer
-```
-Check if this packages were added in the csproj file.
-if not, add them manually, and run dotnet restore.
+    cd simpleAPI
+</code>
 
-## 2.3 Create Context (Manually)
+<h4>
+
+    2.2 Add Entity Framework
+</h4>
+
+<code class="code">
+
+    dotnet add package Microsoft.EntityFrameworkCore.Design
+    dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+    dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+</code>
+
+<p>
+
+    Check if this packages were added in the csproj file.
+    if not, add them manually, and run dotnet restore.
+</p>
+
+<h4>
+    2.3 Create Context (Manually)
+</h4>
+<p>
+
     You can copy the content from simpleAPI/Data/SimpleContext.cs for it!
     *OR*
     Create a directory called 'Data' inside simpleAPI 
     and create a file called SimpleContext.cs
-
+    
     Remember to set up the right connection string in the app.settings
-
+    
     Make the Context consistent by adding it as a dbContext in the program.cs file
     Seed data in the program.cs file
+</p>
 ### Simple in the SimpleContext will be the database name
 
-# 2.4 Create Tables
+<h4>
+    2.4 Create Tables
+</h4>
+<p>
+
     In the Context, create a table by Creating a DbSet and passing a model.
     The Property name will be the table name.
-
+    <br>
     Create a model that you're going to use in the db
-
+    <br>
     Create a table in the Simple Context.
+</p>
 
-    Now you have to migrate!
-    ### Run this command everytime you change somethingn on the context or in a model!!!!!
+     Now you have to migrate!
+    Run this command everytime you change somethingn on the context or in a model!!!!!
     ```bash
     dotnet ef migrations add {Name}
     ```
@@ -107,27 +157,40 @@ if not, add them manually, and run dotnet restore.
     ```
 
 
-# 2.5 Create Controller:
-    We need a Context in the controller.
-    In order to access the db.
+<h4>
+    2.5 Create Controller:
+</h4> 
+   <p>
+       
+       We need a Context in the controller.
+       In order to access the db.
+    </p> 
 
 
-# 3. Create React APP
-    ```bash
-    npx create-react-app simpleclient
-    ```
-You need to add a CORS policy in the backend to connect:
-  ```bash
-    app.UseCors(opt => 
-      opt.SetIsOriginAllowed(origin => true));
-    ```
+<h3>
+
+    3. Create React APP
+</h3>
+   <code class="code">
+       
+       npx create-react-app simpleclient <br>
+    </code>
+   <p>
+       
+       You need to add a CORS policy in the backend to connect:
+    </p>
+    <code class="code">
+        app.UseCors(opt => 
+          opt.SetIsOriginAllowed(origin => true));
+    </code>
+  <br>
 On react, you can fetch normally
     </p>
     
             <p>
     And that's it!
     
-    I hope this has been a helpful introduction to React. If you have questions, feel free to comment down below.
+    I hope this has been a helpful introduction to create an API and a React App. If you have questions, feel free to comment down below.
 </p>
 </p>
         </div>

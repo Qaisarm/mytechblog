@@ -324,14 +324,13 @@ font-size: 1em;
   .thankyou-wrapper a{
     font:26px Arial, Helvetica, sans-serif;
     text-align:center;
-    color:#ffffff;
+    color:var(--black);
     display:block;
+    position: relative;
     text-decoration:none;
     width:250px;
-    background:#E47425;
     margin:10px auto 0px;
-    padding:15px 20px 15px;
-    border-bottom:5px solid #F96700;
+    padding:15px 10px 15px;
   }
   .thankyou-wrapper a:hover{
     font:26px Arial, Helvetica, sans-serif;
@@ -340,7 +339,6 @@ font-size: 1em;
     display:block;
     text-decoration:none;
     width:250px;
-    background:#F96700;
     margin:10px auto 0px;
     padding:15px 20px 15px;
     border-bottom:5px solid #F96700;

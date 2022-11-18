@@ -1,22 +1,38 @@
-
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>ThankYou</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <title>Qaisar-Tech-Blog</title>
 </head>
+
 <body>
-    <section class="login-main-wrapper">
+    <header>
+        <a href="#" class="logo"> My Tech Blog</a>
+        <div class="menuToggle"></div>
+    </header>
+    <ul class="navigation">
+        <li><a href="/index.html#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="/index.html#home"" onclick="toggleMenu()">Home</a></li>
+        <li><a href="/index.html#post"onclick="toggleMenu()">Post</a></li>
+        <li><a href="#contact"onclick="toggleMenu()">Contact</a></li>
+
+    </ul>
+ 
+ 
+
+    <section class="logo">
         <div class="main-container">
             <div class="login-process">
                 <div class="login-main-container">
                     <div class="thankyou-wrapper">
                         <h1><img src="http://montco.happeningmag.com/wp-content/uploads/2014/11/thankyou.png" alt="thanks" /></h1>
                           <p>for contacting us, we will get in touch with you soon... </p>
+                          <button class="btn">
                           <a href="https://qaisarm.github.io/mytechblog">Back to home</a>
+                        </button>
                           <div class="clr"></div>
                       </div>
                       <div class="clr"></div>
@@ -25,5 +41,36 @@
               <div class="clr"></div>
           </div>
       </section>
+     
+    <!-- Footer-->
+    <footer>
+        <a href="#" class="logo"> My Tech Blog</a>
+        <ul class="footerMenu">
+            <li><a href="https://qaisarm.github.io/mytechblog/#home">Home</a></li>
+            <li><a href="https://qaisarm.github.io/mytechblog/#about">About</a></li>
+            <li><a href="https://qaisarm.github.io/mytechblog/#post">Post</a></li>
+            <li><a href="https://qaisarm.github.io/mytechblog/#contact">Contact</a></li>
+        </ul>
+        <p class="copyrightText"> Copyright &#169; 2022 Qaisar's Tech Blog. All Right Reserved</p>
+    </footer>
+    <script>
+
+        const menuToggle = document.querySelector('.menuToggle');
+        const navigation = document.querySelector('.navigation');
+        menuToggle.onclick = function () {
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0)
+        })
+        function toggleMenu()
+        {
+            menuToggle.classList.remove('active');
+            navigation.classList.remove('active')
+        }
+    </script>
 </body>
-</html>
+
+</html> -->
